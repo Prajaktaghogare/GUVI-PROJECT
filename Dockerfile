@@ -11,5 +11,7 @@ COPY style.css .
 # Expose port 80 for the web server
 EXPOSE 80
 
+ENTRYPOINT ["java","-jar","/firstDockerImage"]
+
 # Start Nginx when the container runs
 CMD ["nginx", "-g", "daemon off;"]
